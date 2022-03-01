@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse text-center" id="navmenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item nav-link">
-                  T1Y0085608 TUN
+                   Üye Kodu: T1Y0085608 TUN
                 </li>
                 <li class="nav-item">
                     <a href="#urunler" class="nav-link">Ürünler</a>
@@ -40,7 +40,7 @@
     <div class="container">
         <div class="d-sm-flex align-items-center justify-content-between">
             <div>
-                <h1><span class="text-dark">Herbalife</span> İle Yeni Bir Hayat</h1>
+                <h1><span class="text-dark">Herbalife</span> ile Yeni Bir Hayat</h1>
                 <p class="lead my-4">Protein karışımlarımız, kilo yönetimi programlarımız, besin takviyeleri, spor beslenme ve kişisel bakım ürünlerimizin yardımıyla dengeli beslenmeyi nasıl elde edebileceğinizi keşfedin. Daha iyi ve daha sağlıklı bir aktif yaşam için sizde ilk adımı atın.<br>
                     <br>Öğün yerine geçen shake ve gıda takviyesi ürünlerinin geliştirilmesinde 40 yılı aşkın tecrübemizle, beslenme alanında uzmanız. Ürünlerimiz, hedeflerinize ulaşmanıza yardımcı olmak için özel olarak tasarlanmaktadır ancak bizi özel kılan asıl değer, sürekli olarak büyüyen topluluğumuzdur. Tüm dünyada faaliyet gösteren Bağımsız Distribütör ağımız, beslenme yolculuğunuzda size her konuda destek vermeye hazırdır.                </p>
                 <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#kayitbuton">Ayrıcalıklı Müşteri & Distiribütör Olun!</button>
@@ -66,13 +66,13 @@
                 <div class="card bg-dark text-light h-100">
                     <img src="img/herbashake.jpeg" class="card-img-top w-100" alt="Besleyici shake karışımı Formül">
                     <div class="card-body text-center">
-                        <h3 class="card-title mb-3">Besleyici shake karışımı Formül</h3>
+                        <h3 class="card-title mb-3">Besleyici Shake Karışımı Formül</h3>
                         <p class="card-text">Protein ve temel besinlerin birleşiminden oluşan dengeli bir öğündür.
                             Protein, kas kütlesinin korunmasına katkıda bulunur.
-                            Formül 1 aralarında Bvitaminleri, C vitamini, kalsiyum ve demir bulunan 22 vitamin ve mineral içerir.
+                            Formül 1 aralarında B vitaminleri, C vitamini, kalsiyum ve demir bulunan 22 vitamin ve mineral içerir.
                             B vitaminleri, riboflavin, B6, B12 vitamini normal enerji oluşum metabolizmasına katkıda bulunur.
                             Kilo kontrolü için, günde iki öğün Formül 1 shake'i tercih edip bir öğün sağlıklı yemek yiyebilirsiniz.
-                            İdeal kilonuzu koruyabilmek için, günde bir öğün Formül 1 shake'i tercih edip, iki öğün sağlıklı yemek yiyebilirsiniz.         
+                            İdeal kilonuzu koruyabilmek için, günde bir öğün Formül 1 shake'i tercih edip iki öğün sağlıklı yemek yiyebilirsiniz.         
                             *Formül 1 Shake'lerin kalorisi sınırlanmış bir diyette diğer gıdalar ve düzenli yapılan egzersizle birliktekullanılması amaçlanmıştır.Yeterli miktarda sıvı alımını sürdürmeniz ve bu talimatları belirtildiği şekilde uygulamanız önem taşımaktadır.</p>
                             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#satinalbuton">
                                 <div class="h1 mb-3"><i class="bi bi-basket2"></i></div>
@@ -360,7 +360,7 @@
         </div>
         <div class="modal-body">
           <p class="lead">Aşağıdaki bilgi formunu doldurduktan sonra, en kısa zamanda sizinle iletişime geçeceğiz.</p>
-          <form class="row">
+          <form class="row" onsubmit="sendEmail(); reset(); return false; ">
               <div class="col-md-6">
                   <label for="isim" class="col-form-label">
                       İsim:
@@ -409,7 +409,7 @@
         </div>
         <div class="modal-body">
           <p class="lead">Aşağıdaki bilgi formunu doldurduktan sonra, en kısa zamanda sizinle iletişime geçeceğiz.</p>
-          <form class="row">
+          <form class="row" onsubmit="sendEmail(); reset(); return false; ">
               <div class="col-md-6">
                   <label for="isim" class="col-form-label">
                       İsim:
@@ -468,8 +468,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 
     <script>
+      client.UseDefau
+      function sendEmail(){
+                Email.send({
+            Host : "smtp.gmail.com",
+            Username : "alperentuna26@gmail.com",
+            Password : "iaavibmemjlqiicl",
+            To : 'lisecumbus@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Yeni Müşteri Formu",
+            Body : "İsim Soyisim:" + document.getElementById("isim").value+" "+ document.getElementById("soyisim").value+" Numara E-posta "+ document.getElementById("email").value+" "+document.getElementById("numara").value+" Yaş "+document.getElementById("yas").value
+        }).then(
+          message => alert("En kısa sürede iletişime geçeceğiz.")
+        );
+      }
+
+
         mapboxgl.accessToken = 'pk.eyJ1IjoiYXR1bmEwMCIsImEiOiJja3p0MTZiNnYwY3c4Mm9sNnA5MzBsZjBuIn0.EyXhfLOwGM2COxLkn0sHag';
         var map = new mapboxgl.Map({
         container: 'map',
