@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://kit.fontawesome.com/e3837aae3c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="search-input">
+            <input type="text" placeholder="Enter a Book Name" id="giris">
+            <div class="autocom-box">
+            </div>
+            <div class="icon"><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </div>
+    <div class="kitapalani">
+        <div class="girilenkitaplar">
+            <table class="table table-striped table-hover table-responsive">
+                <thead>
+                    <tr id="enterPoint">
+                        <th>#</th>
+                        <th>Book Name</th>
+                        <th>Author Name</th>
+                        <th>Number of Pages</th>
+                        <th>Price</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="kitaplar">
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-light bas">Suggest Book!</button>
+        </div>
+    </div>
+    <br>
+    <footer class="p-5 position-relative footer-dark" >
+        <div uk-alert class="uk-animation-shake bg-transparent" uk-sticky="position: bottom; offset: -10">
+            <a class="uk-alert-close" uk-close></a>
+            <h3 class="uk-text-center uk-text-warning">Notice</h3>
+            <p class="uk-text-center">Suggestbook.net is still under development. The site is still in open beta and the number of books in our library is very small. We strive every day to increase the number of our books. If you have any suggestions, please let us know.</p>
+            <p class="uk-text-center uk-position-bottom-center">Developed with <a href="mailto:alperentuna26@gmail.com">ATuna</a></p> 
+        </div>
+    </footer>
+    <script src="js/suggestions.js"></script> 
+    <script src="js/script.js"></script> 
+    
+    <script>
+
+
+    </script>
+</body>
+</html>
